@@ -36,10 +36,15 @@ models:
     staging:
       +materialized: table
       +enabled: true
-      +schema: stg_northwind
+      +schema: staging
     warehouse:
       +materialized: table
       +enabled: true
-      +schema: dwh_northwind
+      +schema: warehouse
       dim_date:
         +materialized: view
+    analytics:
+      +materialized: table
+      +enabled: true
+      +schema: analytics
+
