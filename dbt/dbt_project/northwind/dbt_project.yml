@@ -35,3 +35,16 @@ models:
     # Config indicated by + and applies to all files under models/example/
     staging:
       +materialized: table
+      +enabled: true
+      +schema: staging
+    warehouse:
+      +materialized: table
+      +enabled: true
+      +schema: warehouse
+      dim_date:
+        +materialized: view
+    analytics:
+      +materialized: table
+      +enabled: true
+      +schema: analytics
+
